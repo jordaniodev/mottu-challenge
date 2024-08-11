@@ -19,6 +19,13 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "pt",
+        "locales": {
+          "en": "src/locale/messages.en.xlf",
+          "es": "src/locale/messages.es.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -40,6 +47,16 @@
             "scripts": []
           },
           "configurations": {
+            "en": {
+              "localize": [
+                "en"
+              ]
+            },
+            "es": {
+              "localize": [
+                "es"
+              ]
+            },
             "production": {
               "budgets": [
                 {
@@ -75,6 +92,12 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
+            "en": {
+              "browserTarget": "mottu-desafio:build:en"
+            },
+            "es": {
+              "browserTarget": "mottu-desafio:build:es"
+            },
             "production": {
               "browserTarget": "mottu-desafio:build:production"
             },
