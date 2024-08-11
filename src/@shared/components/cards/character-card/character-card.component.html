@@ -1,0 +1,10 @@
+<div class="character-card">
+    <span class="like-button" [class.liked]="isFavorited" (click)="toggleFavorite(character!.id)">
+        <img [src]="isFavorited ? '/assets/img/icons/heart.svg' : '/assets/img/icons/heart-unlike.svg'" alt="Heart">
+    </span>
+    <img [src]="character?.image" alt="" class="cover">
+    <div class="container-info">
+        <h3>{{character?.name}}</h3>
+        <h4>{{character?.species}}</h4>
+    </div>
+</div>

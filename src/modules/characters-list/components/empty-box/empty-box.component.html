@@ -1,0 +1,5 @@
+<div class="empty-box" #emptyBox>
+    <p class="title">{{emptyInfo?.title}}</p>
+    <p class="subtitle">{{emptyInfo?.subTitle}}</p>
+    <a [routerLink]="[emptyInfo?.action?.route]" *ngIf="emptyInfo?.action">{{emptyInfo?.action?.label}}</a>
+</div>

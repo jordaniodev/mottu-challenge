@@ -1,0 +1,12 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+.loading-spinner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 100%;
+}

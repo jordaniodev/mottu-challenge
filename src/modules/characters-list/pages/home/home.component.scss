@@ -1,0 +1,15 @@
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+input { 
+    color: var(--white);
+}
+
+.loading-spinner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}

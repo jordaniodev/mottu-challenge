@@ -1,0 +1,55 @@
+.character-card{
+    width: 100%;
+    background-color: var(--black);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+
+    img.cover {
+        width: 100%;
+        height: 224px;
+        object-fit: cover;
+    }
+
+    .like-button{
+        border-radius: 0 0 0 100px;
+        backdrop-filter: blur(8px);
+        display: flex;
+        width: 48px;
+        height: 48px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+
+        &.liked {
+            background: var(--white);
+        }
+    }
+
+    .container-info{
+        display: flex;
+        padding: 12px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        align-self: stretch;
+
+        h3{
+            color: var(--gray-light-1);
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: -0.48px;
+        }
+
+        h4{
+            overflow: hidden;
+            color: var(--gray-1);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+    }
+}

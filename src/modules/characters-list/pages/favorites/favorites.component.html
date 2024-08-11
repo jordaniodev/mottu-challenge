@@ -1,0 +1,14 @@
+<app-layout>
+    <header>
+        <h1>Favoritos</h1>
+    </header>
+    <div class="container-list-cards"  *ngIf="favoriteCharacters$ | async as favoriteCharacters; else loadingElement">
+        <app-characters-list [characters]="favoriteCharacters" *ngIf="countFavorites > 0"></app-characters-list>
+        <app-empty-box [emptyInfo]="emptyInfo" *ngIf="countFavorites === 0"></app-empty-box>
+    </div>
+    <ng-template #loadingElement>
+        <div class="loading-spinner">
+            <mat-spinner></mat-spinner>
+        </div>
+    </ng-template>
+</app-layout>

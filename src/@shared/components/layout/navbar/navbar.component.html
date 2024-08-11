@@ -1,0 +1,13 @@
+<nav>
+    <ul>
+        <li [class.active]="isActiveRoute('/characters')" [routerLink]="['/characters']">
+            <img [src]="isActiveRoute('/characters') ? '/assets/img/icons/home.svg' : '/assets/img/icons/home-inactive.svg'" alt="Home">
+            Início
+        </li>
+        <li [routerLink]="['/characters/favorites']" [class.active]="isActiveRoute('/characters/favorites')">
+            <img [src]="isActiveRoute('/characters/favorites') ? '/assets/img/icons/heart.svg' : '/assets/img/icons/heart-inactive.svg'" alt="Heart">
+            Favoritos
+            <span class="bagde">{{countFavorites}}</span>
+        </li>
+    </ul>
+</nav>

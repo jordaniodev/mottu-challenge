@@ -1,0 +1,15 @@
+header {
+    width: 100%;
+    background-color: var(--black);
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 8px 24px;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    img {
+        width: 114px;
+        cursor: pointer;
+    }
+}

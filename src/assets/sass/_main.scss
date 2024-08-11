@@ -1,0 +1,48 @@
+@import "./reset";
+@import "./colors";
+
+body {
+    font-family: "Poppins";
+    background-color: var(--gray-bg);
+}
+
+h1,
+h2,
+h3{
+    font-family: "Creepster", "Poppins", sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 48px */
+    letter-spacing: -0.96px;
+}
+
+h1 {
+    color: var(--brand-blue);
+    text-shadow:
+        0px 3px 6px rgba(0, 0, 0, 0.08),
+        0px 3px 6px rgba(0, 0, 0, 0.12);
+    -webkit-text-stroke: 2px var(--brand-green);
+    font-size: 3rem;
+}
+
+/* Alterar cor de borda do input do Material Angular*/
+mat-label{
+    color: var(--gray-3);
+}
+.mat-form-field-outline-start,
+.mat-form-field-outline-gap,
+.mat-form-field-outline-end {
+    border-color: var(--gray-3) !important;
+}
+.mat-form-field-wrapper:has(input:focus) {
+    .mat-form-field-outline-gap {
+        border-top: none !important;
+    }
+}
+
+// Altera cor do loading
+.mat-progress-spinner circle, .mat-spinner circle {
+    stroke: var(--white);
+}
