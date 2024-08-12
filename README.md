@@ -114,3 +114,8 @@ cd mottu-challenge
 ```sh
 npm i
 ```
+
+3. Rodar projeto:
+```sh
+npm start
+```
