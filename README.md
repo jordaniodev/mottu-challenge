@@ -2,10 +2,10 @@
 <p align="center">
     <img src="https://mottu-jordanio.netlify.app//assets/img/logo/logo.svg" width="150" style="margin-left: 48px" />
 </p>
-<table align="center">
-  <tr>
-    <td><img src="https://mottu.com.br/wp-content/uploads/2022/02/Mottu-grupo-verde-horizontal.png" width="150" /></td>
-    <td><img src="https://i.ibb.co/SPGby68/jordanio.png" width="150" /></td>
+<table align="center" border="0">
+  <tr border="0">
+    <td border="0"><img src="https://mottu.com.br/wp-content/uploads/2022/02/Mottu-grupo-verde-horizontal.png" width="150" /></td>
+    <td border="0"><img src="https://i.ibb.co/SPGby68/jordanio.png" width="150" /></td>
   </tr>
 </table>
 
