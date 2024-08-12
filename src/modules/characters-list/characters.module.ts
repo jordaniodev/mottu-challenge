@@ -7,21 +7,19 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { CharactersListComponent } from './components/characters-list/characters-list.component';
 import { CharactersRoutingModule } from './characters-routing.module';
-import { EmptyBoxComponent } from './components/empty-box/empty-box.component';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { SharedModule } from 'src/@shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 
 
 @NgModule({
-  declarations: [ 
+  declarations: [
     HomeComponent,
     CharactersListComponent,
     FavoritesComponent,
-    EmptyBoxComponent
   ],
   imports: [
     CommonModule,

@@ -18,6 +18,10 @@ export class FavoritesService {
     }
   }
 
+  cleanFavorites(){
+    this.favoritesSubject.next([]);
+  }
+
   removeFavorite(id: number): void {
     const currentFavorites = this.favoritesSubject.getValue();
     this.favoritesSubject.next(currentFavorites.filter(favId => favId !== id));

@@ -6,12 +6,9 @@ import { Character } from 'src/@shared/models/character';
   templateUrl: './characters-list.component.html',
   styleUrls: ['./characters-list.component.scss']
 })
-export class CharactersListComponent implements OnInit {
+export class CharactersListComponent  {
 
   @Input() characters?: Character[];
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

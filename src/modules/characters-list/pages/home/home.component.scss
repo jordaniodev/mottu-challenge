@@ -1,8 +1,18 @@
 header{
     display: flex;
     justify-content: space-between;
-}
+    gap: 24px;
+    
+    
+    @media (max-width: 430px) { 
+        flex-direction: column;
+        gap: 24px;
 
+        input {
+            width: 100%;
+        }
+    }
+}
 input { 
     color: var(--white);
 }
@@ -12,4 +22,13 @@ input {
     align-items: center;
     justify-content: center;
     height: 300px;
+}
+.infinte-scroll-loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 240px;
+}
+.hidden{
+    display: none;
 }

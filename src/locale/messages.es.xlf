@@ -1,12 +1,80 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="pt" target-language="es" datatype="plaintext" original="ng2.template">
-    <body>
-      <trans-unit id="homeTitle" datatype="html">
-        <source>Início</source>
-        <target>Inicio</target>
-      </trans-unit>
-      <!-- Adicione outras traduções aqui -->
-    </body>
-  </file>
+<xliff version="1.2"
+    xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="pt" target-language="es" datatype="plaintext" original="ng2.template">
+        <body>
+            <trans-unit id="homeTitle" datatype="html">
+                <source>Início</source>
+                <target>Inicio</target>
+            </trans-unit>
+
+            <trans-unit id="favoritesTitle" datatype="html">
+                <source>Favoritos</source>
+                <target>Favoritos</target>
+            </trans-unit>
+            
+            <trans-unit id="searchLabel" datatype="html">
+                <source>Pesquisar</source>
+                <target>Buscar</target>
+            </trans-unit>
+
+ 
+            <trans-unit id="emptyBoxFavoritesFilterTitle" datatype="html">
+                <source>Nenhum dos favoritos correspondem com seu filtro</source>
+                <target>Ninguno de los favoritos coincide con tu filtro.</target>
+            </trans-unit>
+ 
+            <trans-unit id="emptyBoxFavoritesFilterSubTitle" datatype="html">
+                <source>Limpe o campo de filtro e tente novamente</source>
+                <target>Borre el campo del filtro y vuelva a intentarlo.</target>
+            </trans-unit>
+
+
+ 
+            <trans-unit id="emptyBoxFavoritesFilterActionLabel" datatype="html">
+                <source>Limpar campo de filtro</source>
+                <target>Borrar campo de filtro</target>
+            </trans-unit>
+
+            <trans-unit id="cleanFavoritesButton" datatype="html">
+                <source>Limpar favoritos</source>
+                <target>Borrar favoritos</target>
+            </trans-unit>
+
+            <!-- EMPTY BOX HOME -->
+            <trans-unit id="emptyBoxTitle" datatype="html">
+                <source>Nada foi encontrado</source>
+                <target>No se encontró nada</target>
+            </trans-unit>
+            <trans-unit id="emptyBoxSubTitle" datatype="html">
+                <source>Tente realizar uma nova busca.</source>
+                <target>Intente realizar una nueva búsqueda.</target>
+            </trans-unit>
+
+              <!-- EMPTY BOX FAVORITES -->
+            <trans-unit id="emptyBoxFavoritesTitle" datatype="html">
+                <source>Parece que você ainda não tem favoritos</source>
+                <target>Parece que aún no tienes favoritos</target>
+            </trans-unit>
+            <trans-unit id="emptyBoxFavoritesSubTitle" datatype="html">
+                <source>Volte à página inicial e escolha os melhores para você.</source>
+                <target>Vuelve a la página de inicio y elige los mejores para ti.</target>
+            </trans-unit>
+            <trans-unit id="emptyBoxFavoriteActionLabel" datatype="html">
+                <source>Voltar ao início.</source>
+                <target>Volver al inicio</target>
+            </trans-unit>
+
+
+            <!-- NAVBAR -->
+            <trans-unit id="homeNavBar" datatype="html">
+                <source>Início</source>
+                <target>Inicio</target>
+            </trans-unit>
+            <trans-unit id="favoritesNavBar" datatype="html">
+                <source>Favoritos</source>
+                <target>Favoritos</target>
+            </trans-unit>
+        </body>
+    </file>
 </xliff>

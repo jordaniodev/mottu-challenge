@@ -2,14 +2,22 @@
     <header>
         <h1 i18n="@@homeTitle">Início</h1>
         <mat-form-field appearance="outline" >
-            <mat-label >Pesquisar</mat-label>
-            <input matInput class="search-input" [formControl]="searchControl">
+            <mat-label i18n="@@searchLabel">Pesquisar</mat-label>
+            <input matInput class="search-input" [formControl]="searchControl" required>
         </mat-form-field>
     </header>
-    <div class="container-list-cards" *ngIf="charactersList$ | async as charactersList; else loadingElement">
-        <app-characters-list [characters]="charactersList.results"></app-characters-list>
-        <app-empty-box [emptyInfo]="emptyInfo" *ngIf="charactersList.results.length === 0"></app-empty-box>
+    <div class="container-list-cards" *ngIf="charactersSearch?.results; else loadingElement">
+        <app-characters-list [characters]="charactersSearch?.results"></app-characters-list>
+        <div class="empty-box" *ngIf="charactersSearch?.results?.length === 0">
+            <p class="title" i18n="@@emptyBoxTitle">Nada foi encontrado</p>
+            <p class="subtitle" i18n="@@emptyBoxSubTitle">Tente realizar uma nova busca.</p>
+        </div>
     </div>
+    
+    <div class="loading-spinner" #scrollTrigger [class.hidden]="isLoading || !charactersSearch?.info?.next">
+        <mat-spinner></mat-spinner>
+    </div>
+    
     <ng-template #loadingElement>
         <div class="loading-spinner">
             <mat-spinner></mat-spinner>

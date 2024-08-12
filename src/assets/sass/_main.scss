@@ -27,6 +27,53 @@ h1 {
     font-size: 3rem;
 }
 
+
+.empty-box{
+    background-color: var(--black);
+    border-radius: var(--measure-radius-s, 12px);
+    border: 1px solid var(--gray-2);
+    display: flex;
+    align-items: center;
+    height: clamp(360px, 512px, calc(100vh - 240px));
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+
+    .title {
+        font-family: "Poppins";
+        text-align: center;
+        color: var(--gray-light-1);
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: -0.48px;
+    }
+    .subtitle{
+        color: var(--gray-1);
+        font-family: "Poppins";
+        text-align: center;
+        font-size: 1,25rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    a, button {
+        display: flex;
+        height: 40px;
+        min-width: 80px;
+        padding: 4px 16px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        background: var(--white);
+        text-decoration: none;
+        color: var(--black);
+        border: none;
+    }
+}
+
+
 /* Alterar cor de borda do input do Material Angular*/
 mat-label{
     color: var(--gray-3);
@@ -36,10 +83,13 @@ mat-label{
 .mat-form-field-outline-end {
     border-color: var(--gray-3) !important;
 }
-.mat-form-field-wrapper:has(input:focus) {
+.mat-form-field-wrapper:has(input:focus), .mat-form-field-wrapper:has(input:valid) {
     .mat-form-field-outline-gap {
         border-top: none !important;
     }
+}
+.mat-placeholder-required{
+    display: none;
 }
 
 // Altera cor do loading

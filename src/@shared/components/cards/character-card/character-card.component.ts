@@ -7,17 +7,13 @@ import { FavoritesService } from 'src/@shared/services/favorites/favorites.servi
   templateUrl: './character-card.component.html',
   styleUrls: ['./character-card.component.scss']
 })
-export class CharacterCardComponent implements OnInit {
+export class CharacterCardComponent {
 
   @Input() character?: Character;
 
   constructor(
     private favoriteService: FavoritesService
   ) { }
-
-  ngOnInit(): void {
-
-  }
 
   toggleFavorite(id: number): void {
     if(this.favoriteService.isFavorite(id)){

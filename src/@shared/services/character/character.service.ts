@@ -17,9 +17,11 @@ export class CharacterService {
     private httpClient: HttpClient
   ) { }
 
-  searchCharacter(name?: string): Observable<SearchCharacter> {
+  searchCharacter(name?: string, page = 1): Observable<SearchCharacter> {
     let params = new URLSearchParams();
+    params.set('page', String(page));
     if (name) params.set('name', name);
+    
     return this.httpClient.get<SearchCharacter>(`${environment.apiUrl}?${params.toString()}`).pipe(
       map(response => response),
       catchError(error => {

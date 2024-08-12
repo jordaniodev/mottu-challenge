@@ -1,10 +1,30 @@
 <app-layout>
     <header>
-        <h1>Favoritos</h1>
+        <h1 i18n="@@favoritesTitle">Favoritos</h1>
+        <div class="action-container"  *ngIf="countFavorites > 0">
+            <mat-form-field appearance="outline" >
+                <mat-label i18n="@@searchLabel">Pesquisar</mat-label>
+                <input matInput class="search-input" [formControl]="searchControl" required>
+            </mat-form-field>
+            <button class="clean-favorites" (click)="cleanFavorites()">
+                <img src="/assets/img/icons/trash.svg" alt="" class="icon">
+                <span class="label" i18n="@@cleanFavoritesButton">Limpar favoritos</span>
+            </button>
+        </div>
     </header>
     <div class="container-list-cards"  *ngIf="favoriteCharacters$ | async as favoriteCharacters; else loadingElement">
-        <app-characters-list [characters]="favoriteCharacters" *ngIf="countFavorites > 0"></app-characters-list>
-        <app-empty-box [emptyInfo]="emptyInfo" *ngIf="countFavorites === 0"></app-empty-box>
+        <app-characters-list [characters]="listFiltered(favoriteCharacters)" *ngIf="countFavorites > 0"></app-characters-list>
+        <div class="empty-box" *ngIf="countFavorites === 0">
+            <p class="title" i18n="@@emptyBoxFavoritesTitle">Parece que você ainda não tem favoritos</p>
+            <p class="subtitle" i18n="@@emptyBoxFavoritesSubTitle">Volte à página inicial e escolha os melhores para você.</p>
+            <a [routerLink]="['/']" i18n="@@emptyBoxFavoriteActionLabel"> Voltar ao início</a>
+        </div>
+
+        <div class="empty-box" *ngIf="countFavorites > 0 && listFiltered(favoriteCharacters).length === 0">
+            <p class="title" i18n="@@emptyBoxFavoritesFilterTitle">Nenhum dos favoritos correspondem com seu filtro</p>
+            <p class="subtitle" i18n="@@emptyBoxFavoritesFilterSubTitle">Limpe o campo de filtro e tente novamente</p>
+            <button (click)="cleanFilter()" i18n="@@emptyBoxFavoritesFilterActionLabel"> Limpar campo de filtro</button>
+        </div>
     </div>
     <ng-template #loadingElement>
         <div class="loading-spinner">

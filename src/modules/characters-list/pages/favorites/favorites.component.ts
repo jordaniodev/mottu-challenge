@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { distinctUntilChanged, iif, Observable, switchMap } from 'rxjs';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { debounceTime, distinctUntilChanged, iif, Observable, Subject, switchMap, takeUntil } from 'rxjs';
 import { Character } from 'src/@shared/models/character';
 import { SearchCharacter } from 'src/@shared/services/character/character.interface';
 import { CharacterService } from 'src/@shared/services/character/character.service';
 import { FavoritesService } from 'src/@shared/services/favorites/favorites.service';
-import { EmptyBoxInfo } from '../../components/empty-box/empty-box.types';
 
 @Component({
   selector: 'app-favorites',
@@ -14,14 +14,8 @@ import { EmptyBoxInfo } from '../../components/empty-box/empty-box.types';
 export class FavoritesComponent implements OnInit {
 
   public favoriteCharacters$?: Observable<Character[]>;
-  public readonly emptyInfo: EmptyBoxInfo = {
-    title: 'Parece que você ainda não tem favoritos',
-    subTitle: 'Volte à página inicial e escolha os melhores para você.',
-    action: {
-      label: 'Voltar ao início',
-      route: '/'
-    }
-  }
+  public isLoading = false;
+  public searchControl: FormControl = new FormControl();
 
   constructor(
     private favoritesService: FavoritesService,
@@ -30,7 +24,7 @@ export class FavoritesComponent implements OnInit {
 
   ngOnInit(): void {
     this.favoriteCharacters$ = this.favoritesService.favorites$.pipe(
-      switchMap(ids => this.characterService.searchCharacterByIds(ids))
+      switchMap(ids => this.characterService.searchCharacterByIds(ids)),
     );
   }
 
@@ -38,4 +32,16 @@ export class FavoritesComponent implements OnInit {
     return this.favoritesService.countFavorite();
   }
 
+  listFiltered(characters: Character[]) {
+    if(this.searchControl.value === '' || this.searchControl.value === null) return characters;
+    return characters.filter((character) => new RegExp(this.searchControl.value, 'i').test(character.name))
+  }
+
+  cleanFavorites() {
+    this.favoritesService.cleanFavorites();
+  }
+
+  cleanFilter(){
+    this.searchControl.setValue('');
+  }
 }
