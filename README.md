@@ -3,8 +3,7 @@
     <img src="https://mottu-jordanio.netlify.app//assets/img/logo/logo.svg" width="150" style="margin-left: 48px" />
 </p>
 <p align="center"><img src="https://mottu.com.br/wp-content/uploads/2022/02/Mottu-grupo-verde-horizontal.png" width="150" />
-<img src="https://camo.githubusercontent.com/fe2890d29d44d9bbe0f2a479a3fb84ac58d8dc9d8dd18851813c347a60be27b3/
-68747470733a2f2f692e6962622e636f2f535047627936382f6a6f7264616e696f2e706e67" width="150" style="margin-left: 48px" />
+<img src="https://i.ibb.co/SPGby68/jordanio.png" width="150" style="margin-left: 48px" />
 
 </p>
 
