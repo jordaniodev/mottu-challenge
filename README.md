@@ -7,6 +7,7 @@
 68747470733a2f2f692e6962622e636f2f535047627936382f6a6f7264616e696f2e706e67" width="150" style="margin-left: 48px" />
 
 </p>
+
 ## Visão Geral
 
 Este projeto é um desafio lançado pela mottu que consiste em uma aplicação front-end para busca, visualização e gerenciamento dos seus personagens favoritos da série Rick & Morty. Utiliza a API pública [Rick and Morty API](https://rickandmortyapi.com/) para buscar dados dos personagens e oferece uma interface amigável para gerenciar os favoritos.
