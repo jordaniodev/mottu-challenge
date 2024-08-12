@@ -1,27 +1,116 @@
-# MottuDesafio
+# Aplicação de Favoritos de Rick & Morty
+<p align="center">
+    <img src="https://mottu-jordanio.netlify.app//assets/img/logo/logo.svg" width="150" style="margin-left: 48px" />
+</p>
+<p align="center"><img src="https://mottu.com.br/wp-content/uploads/2022/02/Mottu-grupo-verde-horizontal.png" width="150" />
+<img src="https://camo.githubusercontent.com/fe2890d29d44d9bbe0f2a479a3fb84ac58d8dc9d8dd18851813c347a60be27b3/
+68747470733a2f2f692e6962622e636f2f535047627936382f6a6f7264616e696f2e706e67" width="150" style="margin-left: 48px" />
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
+</p>
+## Visão Geral
 
-## Development server
+Este projeto é um desafio lançado pela mottu que consiste em uma aplicação front-end para busca, visualização e gerenciamento dos seus personagens favoritos da série Rick & Morty. Utiliza a API pública [Rick and Morty API](https://rickandmortyapi.com/) para buscar dados dos personagens e oferece uma interface amigável para gerenciar os favoritos.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Funcionalidades
+- **Busca de Personagens:** Busque personagens pelo nome.
+- **Detalhes dos Personagens:** Veja informações básicas sobre os personagens, incluindo nome, gênero e imagem.
+- **Gerenciamento de Favoritos:** Adicione e remova personagens da sua lista de favoritos a partir de estado global gerenciado por Subjects.
+- **Lista de favoritos:** Lista contendo todos os favoritos.
+- **Contador Dinâmico:** Atualização em tempo real do número de personagens favoritos na navbar.
+- **Design Responsivo:** Otimizado para vários tamanhos de tela.
+- **Internacionalização:** Suporte para múltiplos idiomas.
+- **Carregamento Preguiçoso:** Carregamento eficiente dos módulos de página.
+- **Buscador otimizado:** Campo de input otimizado com operadores RxJs
+- **Fontes personalizadas:** Adição de fontes personalizadas
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Funcionalidades adicionais
+Afim de trazer uma melhor usabilidade foram adicionados pequenas features e são elas:
+- **Filtro nos favoritos:** Permitir que o usuário possa filtrar os personagems favoritos.
+- **Limpar favoritos:** Permitir que o usuário exclua todos os favoritos de uma vez.
+- **Scroll infinito:** Ao chegar ao fim da página, se houver mais registros ou próximas páginas o sistema carrega sozinho.
 
-## Build
+## Tecnologias Utilizadas
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Framework:** Angular 13+
+- **Gerenciamento de Estado:** NgRx, RxJs
+- **Linguagem:** TypeScript
+- **Programação Reativa:** RxJS
+- **Componentes de UI:** Angular Material
+- **Testes:** Jasmine
+- **Qualidade de Código:** Lint
+- **Pre-commit Hooks:** Husky
+- **Internacionalização:** Angular Internacionalization
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Demo
+Voce pode acessar a demo do projeto realizado o deploy em [Demo](https://mottu-jordanio.netlify.app/)
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## Próximos Passos
+- **Melhoria da internacionalização:** Identificação do idioma do navegador e indicar o idioma da aplicação de forma automatica
+- **Melhoria nos observables da home** Uso do async pipe nas requisições e observables.
+- **Preservar Favoritos** Incluir Favoritos em Storage para não perder no recarregamento.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Testes
+
+Testes unitários foram escritos nos principais componentes e telas afim de trazer mais segurança e qualidade para o projeto, para rodar os testes basta rodar o comando.
+```sh
+npm test
+```
+
+## Lint
+
+O lint foi configurado afim de trazer qualidade de código e padronizagem de desenvolvimento, para rodar o lint execute o comando:
+```sh
+npm run lint
+```
+
+
+## Internacionalizacão
+Para  permitir que o projeto seja internacional, foi introduzido o conceito de internacionalização com a utilização o i18n, voce pode rodar os projetos em 3 idiomas:
+### Portugues
+```sh
+npm start
+```
+### Inglês
+```sh
+npm run start:en
+```
+### Espanhol
+```sh
+npm run start:es
+```
+
+
+## Pre Push Process
+No processo de pre-commit os comandos de lint e test unitários são rodados para conferir a integridade do código
+
+## Pre Push Commit
+No processo de pre-Commit os comandos de build são rodados para conferir a integridade da aplicação.
+
+## Começando
+
+### Pré-requisitos
+
+- Node.js 16.13.0
+- npm
+
+### Instalação
+
+1. Clone o repositório:
+```sh
+git clone https://github.com/jordaniodev/mottu-challenge
+```
+
+2. Entre no projeto:
+```sh
+cd mottu-challenge
+```
+
+3. Instale a dependencias:
+```sh
+npm i
+```
